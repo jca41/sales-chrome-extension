@@ -1,0 +1,77 @@
+/* fonts  */
+
+@font-face {
+  font-family: "peacocksans";
+  src: url(fonts/peacocksans-book.woff) format("woff");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "peacocksans";
+  src: url(/fonts/peacocksans-medium.woff) format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "peacocksans";
+  src: url(/fonts/peacocksans-bold.woff) format("woff");
+  font-weight: bold;
+  font-display: swap;
+}
+
+body {
+  font-size: 16px;
+  padding: 0 10px 10px 10px;
+  margin: 0;
+  font-family: peacocksans, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  min-width: 400px;
+  min-height: 150px;
+}
+
+/* form elements  */
+
+button {
+  background-color: rgb(252, 204, 18);
+  color: rgb(0, 0, 0);
+  border-radius: 6px;
+  padding: 10px 20px;
+  border-width: 0px;
+  border-style: solid;
+  font-size: 16px;
+  font-family: peacocksans;
+  cursor: pointer;
+}
+
+input[type="text"],
+select {
+  width: calc(100% - 20px);
+  font-size: 16px;
+  font-family: monospace;
+  border-radius: 6px;
+  line-height: 20px;
+  border: 1px solid #a4a5a7;
+  padding: 6px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #000;
+  cursor: pointer;
+  height: 20px;
+  vertical-align: top;
+  width: 20px;
+}
+
+input[type="checkbox"]:checked {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzMzOTI1NyIgZD0ibTEwLjAzNSAwIDEuNDg3IDEuNDg3LTcuNDM2IDcuNDM2LTEuNDg4LTEuNDg3eiIvPjxwYXRoIGZpbGw9IiMzMzkyNTciIGQ9Im0wIDQuOTkzIDEuNDg3LTEuNDg3IDQuMDA3IDQuMDA3TDQuMDA3IDl6Ii8+PC9zdmc+);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 16.6px 13.3px;
+}

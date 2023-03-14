@@ -1,0 +1,58 @@
+{
+  "name": "Peacock Sales Tools",
+  "description": "Developer tools for working with Peacock Sales",
+  "version": "0.1",
+  "manifest_version": 3,
+  "host_permissions": [
+    "https://www.peacocktv.com/",
+    "https://www.stable-int.peacocktv.com/",
+    "https://sas.stable-int.peacocktv.com/",
+    "https://*.id.stable-int.peacocktv.com/",
+    "https://ovp.stable-int.peacocktv.com/",
+    "https://local.peacocktv.com/",
+
+    "https://www.skyshowtime.com/",
+    "https://www.stable-int.skyshowtime.com/",
+    "https://sas.stable-int.skyshowtime.com/",
+    "https://*.id.stable-int.skyshowtime.com/",
+    "https://ovp.stable-int.skyshowtime.com/",
+    "https://local.skyshowtime.com/",
+
+    "https://github.com/",
+    "https://core.spreedly.com/",
+    "https://checkoutshopper-test.adyen.com/"
+  ],
+  "permissions": [
+    "activeTab",
+    "browsingData",
+    "cookies",
+    "declarativeNetRequestWithHostAccess",
+    "scripting",
+    "storage",
+    "webNavigation",
+    "webRequest"
+  ],
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_icon": {
+      "16": "public/images/favicon_16x16.png",
+      "32": "public/images/favicon_32x32.png"
+    }
+  },
+  "icons": {
+    "16": "public/images/favicon_16x16.png",
+    "32": "public/images/favicon_32x32.png"
+  },
+  "background": {
+    "service_worker": "src/background/index.ts"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "peacock",
+        "enabled": false,
+        "path": "src/peacock-rules.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+  [
+    {
+      "id": 1,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "access-control-allow-origin",
+            "operation": "set",
+            "value": "https://local.peacocktv.com:9999"
+          }
+        ]
+      },
+      "condition": {
+        "urlFilter": "sas.stable-int.peacocktv.com",
+        "resourceTypes": [
+          "xmlhttprequest"
+        ],
+        "initiatorDomains": [
+          "local.peacocktv.com"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "requestHeaders": [
+          {
+            "header": "origin",
+            "operation": "set",
+            "value": "https://www.stable-int.peacocktv.com"
+          }
+        ],
+        "responseHeaders": [
+          {
+            "header": "access-control-allow-origin",
+            "operation": "set",
+            "value": "https://local.peacocktv.com:9999"
+          }
+        ]
+      },
+      "condition": {
+        "urlFilter": "*.id.stable-int.peacocktv.com",
+        "resourceTypes": [
+          "xmlhttprequest"
+        ],
+        "initiatorDomains": [
+          "local.peacocktv.com"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "access-control-allow-origin",
+            "operation": "set",
+            "value": "https://local.peacocktv.com:9999"
+          }
+        ]
+      },
+      "condition": {
+        "urlFilter": "ovp.stable-int.peacocktv.com",
+        "resourceTypes": [
+          "xmlhttprequest"
+        ],
+        "initiatorDomains": [
+          "local.peacocktv.com"
+        ]
+      }
+    }
+  ]
